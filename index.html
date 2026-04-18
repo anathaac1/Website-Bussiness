@@ -308,7 +308,7 @@ Kelas: ${kelas}%0A%0A
 Pesanan:%0A${detailPesanan}%0A%0A
 Total: Rp ${totalHarga.toLocaleString('id-ID')}%0A%0A
 Mohon konfirmasi ya! 🙏`;
-  window.open(`https://wa.me/6287831054529?text=${pesan}`, '_blank');
+  window.open(`https://wa.me/6287831054529?text=${encodeURIComponent(pesan)}`, '_blank');
 
   keranjang = {};
   document.getElementById('produk').value = '';
