@@ -302,12 +302,12 @@ function kirim() {
     return `  • ${n} x${q} = Rp ${(harga * q).toLocaleString('id-ID')}`;
   }).join('%0A');
 
- const pesan = `Halo Puddot Luxe 🍮%0A%0A
+const pesan = `Halo Puddot Luxe 🍮%0A%0A
 Nama: ${nama}%0A
 Kelas: ${kelas}%0A%0A
 Pesanan:%0A${detailPesanan}%0A%0A
 Total: Rp ${totalHarga.toLocaleString('id-ID')}%0A%0A
-✨ Stok terbatas & akan dikonfirmasi admin ya 💖`;
+Mohon konfirmasi ya! 🙏`;
   window.open(`https://wa.me/6287831054529?text=${pesan}`, '_blank');
 
   keranjang = {};
