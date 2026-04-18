@@ -1,1 +1,1 @@
-# =PuddotLuxe
+# PuddotLuxe
