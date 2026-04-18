@@ -201,7 +201,10 @@ footer p  { font-size: 13px; }
     <label>Jumlah per Rasa</label>
     <input type="text" id="jumlah" placeholder="— bisa pilih lebih dari 1 varian —" readonly>
     <button class="btn-send" onclick="kirim()">✦ Kirim via WhatsApp ✦</button>
-    <p class="wa-note">Pesanan langsung diteruskan ke WhatsApp kami 💬</p>
+ <p class="wa-note">
+✨ Stok terbatas & dapat berubah sewaktu-waktu.<br>
+Admin akan mengkonfirmasi pesanan melalui WhatsApp ya 💖
+</p>
   </div>
 </section>
 
@@ -299,7 +302,12 @@ function kirim() {
     return `  • ${n} x${q} = Rp ${(harga * q).toLocaleString('id-ID')}`;
   }).join('%0A');
 
-  const pesan = `Halo Puddot Luxe 🍮%0A%0ANama: ${nama}%0AKelas: ${kelas}%0A%0APesanan:%0A${detailPesanan}%0A%0ATotal: Rp ${totalHarga.toLocaleString('id-ID')}%0A%0AMohon konfirmasi ya! 🙏`;
+ const pesan = `Halo Puddot Luxe 🍮%0A%0A
+Nama: ${nama}%0A
+Kelas: ${kelas}%0A%0A
+Pesanan:%0A${detailPesanan}%0A%0A
+Total: Rp ${totalHarga.toLocaleString('id-ID')}%0A%0A
+✨ Stok terbatas & akan dikonfirmasi admin ya 💖`;
   window.open(`https://wa.me/6287831054529?text=${pesan}`, '_blank');
 
   keranjang = {};
